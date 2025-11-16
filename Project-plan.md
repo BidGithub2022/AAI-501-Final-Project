@@ -8,4 +8,8 @@
 
 -> model training 
 
--> model deployment and maintenance
+-> model deployment and maintenance (OUT OF SOPE)
+
+-> Create project document
+
+-> Create presentation and video
