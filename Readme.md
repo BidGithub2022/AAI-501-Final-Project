@@ -1,6 +1,6 @@
-#Project Proposal: Car Price Prediction and Recommendation System
+# Project Proposal: Car Price Prediction and Recommendation System
 
-##Team: Ethan Olmsted & Bidyut Prabha Sahu
+## Team: Ethan Olmsted & Bidyut Prabha Sahu
 
   Amid pandemic-era supply shocks, car shoppers have often paid premiums just to secure a vehicle. A CNBC report citing Edmunds found that by January 2022 82% of new-car buyers paid above MSRP, a dramatic jump from 2.8% a year earlier and 0.3% in early 2020. Average transaction prices reached $45,717, about $728 over the average MSRP of $44,989, reversing the typical pre-pandemic discounts (buyers paid $2,152 below MSRP a year prior). Markups were especially steep for some brands (e.g., Cadillac +$4,048, Land Rover +$2,565, Kia +$2,289), reflecting tight inventories from the semiconductor shortage and strong demand. This environment underscores how easily consumers can overpay without reliable market references—motivating our system’s goals: produce robust price estimates, flag overpriced listings, and surface fair-value alternatives. (O’Brien, 2022)
   Having the user pain point in mind, this project aims to develop a multi-function system to assist potential car buyers, leveraging advanced Deep Learning techniques. The primary goals are:
