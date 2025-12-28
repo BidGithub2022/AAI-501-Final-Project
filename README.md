@@ -129,7 +129,7 @@ High Cardinality: The "Model" variable contained numerous unique entries, creati
 Data Noise: Extreme price variance for identical models (likely due to missing variables like "Trim Level" or "Location") made training a perfect predictor challenging, necessitating the shift toward Unsupervised Similarity as a primary value-add.
 
 ## License
-See the LICENSE.md
+See the LICENSE file.
 
 ## Acknowledgments
 Thank you Professor Dave Friesen!
