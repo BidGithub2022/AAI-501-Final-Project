@@ -1,0 +1,30 @@
+# Project Proposal: Car Price Prediction and Recommendation System
+
+### Team: Bidyut Prabha Sahu
+
+  Amid pandemic-era supply shocks, car shoppers have often paid premiums just to secure a vehicle. A CNBC report citing Edmunds found that by January 2022 82% of new-car buyers paid above MSRP, a dramatic jump from 2.8% a year earlier and 0.3% in early 2020. Average transaction prices reached $45,717, about $728 over the average MSRP of $44,989, reversing the typical pre-pandemic discounts (buyers paid $2,152 below MSRP a year prior). Markups were especially steep for some brands (e.g., Cadillac +$4,048, Land Rover +$2,565, Kia +$2,289), reflecting tight inventories from the semiconductor shortage and strong demand. This environment underscores how easily consumers can overpay without reliable market references—motivating our system’s goals: produce robust price estimates, flag overpriced listings, and surface fair-value alternatives. (O’Brien, 2022)
+  
+  Having the user pain point in mind, this project aims to develop a multi-function system to assist potential car buyers, leveraging advanced Deep Learning techniques. The primary goals are:
+To accurately predict the price of a used car by learning complex, non-linear patterns (DNN Regression).
+To recommend cars from the dataset that closely match a user's specified preferences (Rule-Based Filtering).
+To classify listings as "Good Deals" or "Overpriced" using a neural network (DNN Classification).
+To build a powerful similarity-matching engine to recommend similar vehicles based on their core attributes (Autoencoder Embeddings).
+
+This comprehensive tool will empower users by providing a state-of-the-art price estimate, helping them identify vehicles that meet their requirements, and highlighting the best deals on the market.
+ 
+  The project will utilize the "Car Price Analysis Dataset" from Kaggle (https://www.kaggle.com/datasets/ayeshasiddiqa123/cars-pre/data). This dataset contains various attributes of used cars, such as make, model, year, mileage, engine size, and other features, along with their prices.
+  
+  The project will be executed in four main phases: In phase 1, we will be doing Data Analysis and Preprocessing which will include Initial review of all variables using the Pandas library to understand data types, missing values, and cardinality. Exploratory Data Analysis (EDA) to visualize data distributions and feature correlations. Data Cleaning & Feature Engineering will handle missing values, we will encode categorical variables using One-Hot Encoding, and standardize numerical features (like 'mileage', 'engine_size') using StandardScaler from scikit. This clean, numerical dataset is essential for a Deep Learning model. 
+  
+  In phase 2, a Linear Regression model (scikit-learn) will be implemented first to establish a baseline performance metric. A Deep Neural Network (DNN) Regressor will be constructed using a library like TensorFlow or Keras. This model will have multiple hidden layers, allowing it to learn the complex and non-linear relationships between features (mileage, make, year, etc.) and the car's price. Regression metrics (R square, MAE, RMSE) will be used to compare the performance of the baseline Linear Regression model against the advanced DNN Regressor. In phase 3, User Preference Matching (Rule-Based Filtering) a multi-criteria filtering algorithm will be developed. The system will take user "hard" requirements (e.g., max_price, min_year, fuel_type) and apply them as programmatic filters to the dataset to narrow down the selection. 
+ 
+  In phase 4, "Good Deal" Classifier (DNN Classifier) will be developed which will classify each car listing as a "Good Deal," "Fair Price," or "Overpriced."  It will use the trained DNN Regressor from Phase 2 to get a predicted_price for every car. Then create a new target label by comparing the actual_price to the predicted_price (e.g., if actual_price is 15% below predicted_price, label it "Good Deal"). At last, train a DNN Classifier (using TensorFlow/Keras) on the car's features to predict this new "Good Deal" label.The second part is to create a "you might also like" feature by finding cars that are similar, replacing traditional clustering. It will involve a process called as autoencoder - a specific type of neural network) will be trained on the full, preprocessed feature set of all cars. This model's purpose is to learn a compressed, dense numerical representation (an "embedding" or "latent vector") for each car. When a user views a car, we can take its embedding and use a fast algorithm (like Cosine Similarity) to find the "k-nearest" cars from the dataset, which represent the most similar vehicles.
+  
+  The final deliverable will be a functional system where a user can input the features of a specific car and receive an estimated market price (from the baseline Linear Regression and the advanced DNN Regressor). Users can input  their ideal car preferences and receive a filtered, ranked list of matching cars. Users can see  a "Good Deal" or "Overpriced" badge on listings, powered by the DNN Classifier. Users can receive  intelligent "you might also like" recommendations based on deep feature similarity, powered by the Autoencoder.
+We will use the Module-6 Deep learning materials, take help from LLMs such as Gemini, and libraries including scikit-learn, pandas, tensor flow/keras websites.
+
+
+### References:
+Google. (2025). Gemini [Large language model]. Google. https://gemini.google.com
+
+O’Brien, S. (2022, February 17). More than 80% of consumers are paying above sticker price for a new car. CNBC. https://www.cnbc.com/2022/02/17/more-than-80percent-of-consumers-are-paying-above-sticker-price-for-new-car.html
